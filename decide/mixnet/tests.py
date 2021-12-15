@@ -158,7 +158,7 @@ class MixnetCase(APITestCase):
         self.assertNotEqual(clear, clear2)
         self.assertEqual(sorted(clear), sorted(clear2))
 
-    def test_multiple_auths_mock(self):
+    ***def test_multiple_auths_mock(self):
         '''
         This test emulates a two authorities shuffle and decryption.
         '''
@@ -169,7 +169,7 @@ class MixnetCase(APITestCase):
                 { "name": "auth1", "url": "http://localhost:8000" },
                 { "name": "auth2", "url": "http://127.0.0.1:8000" },
             ]
-        }
+        }***
         response = self.client.post('/mixnet/', data, format='json')
         key = response.json()
         pk = key["p"], key["g"], key["y"]
